@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d3ef4a86eda454282bd47ba19c3fd3, type: 3}
+  m_Name: EasyStage
+  m_EditorClassIdentifier: 
+  stageName: EasyStage
+  enemyCount: 0
+  enemyHealthMultiplier: 1
+  spawnInterval: 5
+  item1Prefab: {fileID: 7745244368214039088, guid: b4de51508c9c27c4887a07bc52274686, type: 3}
+  item2Prefab: {fileID: 7745244368214039088, guid: b4de51508c9c27c4887a07bc52274686, type: 3}
+  item3Prefab: {fileID: 5229523813150851678, guid: 4726f4c38f439be49a376f38161e8193, type: 3}
+  pos1: {x: 0, y: -40, z: 0}
+  pos2: {x: 0, y: -80, z: 0}
+  pos3: {x: 0, y: -120, z: 0}

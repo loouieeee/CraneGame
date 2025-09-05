@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Louis\\MapSelect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|C:\\Users\\Louis\\MapSelect\\assets\\script\\hookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\hookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|c:\\users\\louis\\mapselect\\assets\\stopline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\stopline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|c:\\users\\louis\\mapselect\\assets\\script\\stagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\stagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|C:\\Users\\Louis\\MapSelect\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|C:\\Users\\Louis\\MapSelect\\assets\\script\\difficultyselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\difficultyselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|C:\\Users\\Louis\\MapSelect\\assets\\script\\statgeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\statgeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|C:\\Users\\Louis\\MapSelect\\assets\\script\\panelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\panelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|C:\\Users\\Louis\\MapSelect\\assets\\script\\panelsub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\panelsub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|C:\\Users\\Louis\\MapSelect\\assets\\prefab\\effecttext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C408E648-9563-9F67-70A4-2314F83CE726}|Assembly-CSharp.csproj|solutionrelative:assets\\prefab\\effecttext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StopLine.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\StopLine.cs",
+              "RelativeDocumentMoniker": "Assets\\StopLine.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\StopLine.cs",
+              "RelativeToolTip": "Assets\\StopLine.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAowBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T06:51:22.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DifficultySelector.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\DifficultySelector.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\DifficultySelector.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\DifficultySelector.cs",
+              "RelativeToolTip": "Assets\\Script\\DifficultySelector.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAewBMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T04:41:51.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StageManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\StageManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\StageManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\StageManager.cs",
+              "RelativeToolTip": "Assets\\Script\\StageManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T07:25:20.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Script\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T04:32:46.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EffectText.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Prefab\\EffectText.cs",
+              "RelativeDocumentMoniker": "Assets\\Prefab\\EffectText.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Prefab\\EffectText.cs",
+              "RelativeToolTip": "Assets\\Prefab\\EffectText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T04:16:55.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PanelSub.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\PanelSub.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PanelSub.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\PanelSub.cs",
+              "RelativeToolTip": "Assets\\Script\\PanelSub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T07:59:58.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PanelManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\PanelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PanelManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\PanelManager.cs",
+              "RelativeToolTip": "Assets\\Script\\PanelManager.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAqwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T07:37:36.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StatgeConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\StatgeConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\StatgeConfig.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\StatgeConfig.cs",
+              "RelativeToolTip": "Assets\\Script\\StatgeConfig.cs",
+              "ViewState": "AQIAAAcAAABAYbnkrPUkwA4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T07:25:24.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HookController.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\HookController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\HookController.cs",
+              "ToolTip": "C:\\Users\\Louis\\MapSelect\\Assets\\Script\\HookController.cs",
+              "RelativeToolTip": "Assets\\Script\\HookController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T06:02:21.567Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
