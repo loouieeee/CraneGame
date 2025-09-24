@@ -6,6 +6,13 @@ TagManager:
   tags:
   - ball
   - hook
+  - stop
+  - resultLine
+  - LeftPanel
+  - RightPanel
+  - SpikeBall
+  - SlideStick
+  - Sickle
   layers:
   - Default
   - TransparentFX

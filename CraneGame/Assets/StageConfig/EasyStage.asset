@@ -16,9 +16,9 @@ MonoBehaviour:
   enemyCount: 0
   enemyHealthMultiplier: 1
   spawnInterval: 5
-  item1Prefab: {fileID: 7745244368214039088, guid: b4de51508c9c27c4887a07bc52274686, type: 3}
-  item2Prefab: {fileID: 7745244368214039088, guid: b4de51508c9c27c4887a07bc52274686, type: 3}
-  item3Prefab: {fileID: 5229523813150851678, guid: 4726f4c38f439be49a376f38161e8193, type: 3}
+  item1Prefab: {fileID: 0}
+  item2Prefab: {fileID: 0}
+  item3Prefab: {fileID: 0}
   pos1: {x: 0, y: -40, z: 0}
   pos2: {x: 0, y: -80, z: 0}
   pos3: {x: 0, y: -120, z: 0}
