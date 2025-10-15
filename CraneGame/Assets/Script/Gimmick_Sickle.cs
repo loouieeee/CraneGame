@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Gimmick_Sickle : Gimmick
 {
@@ -25,12 +26,12 @@ public class Gimmick_Sickle : Gimmick
             transform.Rotate(0, dir * rotateSpeed * Time.deltaTime,0);
         }
     }
-    public void SetIsRotateClockwise()
+    public void SetIsRotateClockwise(int value)
     {
-        isRotateClockwise = true;
+        isRotateClockwise = (value != 0);
     }
-    public void SetIsRotate()
+    public void SetIsRotate(int value)
     {
-        isRotate = true;
+        isRotate = (value != 0);
     }
 }

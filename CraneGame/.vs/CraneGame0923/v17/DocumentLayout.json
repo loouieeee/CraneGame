@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|c:\\users\\louis\\downloads\\cranegame0923\\assets\\script\\cameradrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cameradrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame0923\\assets\\script\\stageselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\stageselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame0923\\assets\\script\\snapscroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\snapscroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame0923\\assets\\script\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame0923\\assets\\script\\hookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\hookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame0923\\assets\\script\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame0923\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame0923\\assets\\script\\jiliangbiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1007AEB-90B4-C355-2B5B-9049AB96EA0D}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\jiliangbiao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CameraDrag.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\CameraDrag.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CameraDrag.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\CameraDrag.cs",
+              "RelativeToolTip": "Assets\\Script\\CameraDrag.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T04:57:01.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StageSelector.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\StageSelector.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\StageSelector.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\StageSelector.cs",
+              "RelativeToolTip": "Assets\\Script\\StageSelector.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAqwA8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T02:41:01.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Script\\GameManager.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAswAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T02:32:31.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CameraController.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\CameraController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CameraController.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\CameraController.cs",
+              "RelativeToolTip": "Assets\\Script\\CameraController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA7wCAAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T04:34:38.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HookController.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\HookController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\HookController.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\HookController.cs",
+              "RelativeToolTip": "Assets\\Script\\HookController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAApwGYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T05:44:02.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SnapScroll.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\SnapScroll.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SnapScroll.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\SnapScroll.cs",
+              "RelativeToolTip": "Assets\\Script\\SnapScroll.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T05:01:19.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SceneManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\SceneManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SceneManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\SceneManager.cs",
+              "RelativeToolTip": "Assets\\Script\\SceneManager.cs",
+              "ViewState": "AQIAANIAAAAAAAAAAAAnwOEAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T04:50:32.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "jiliangbiao.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\jiliangbiao.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\jiliangbiao.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame0923\\Assets\\Script\\jiliangbiao.cs",
+              "RelativeToolTip": "Assets\\Script\\jiliangbiao.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAqwDgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T04:04:01.793Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

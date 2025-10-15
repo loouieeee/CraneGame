@@ -34,4 +34,14 @@ public class Gimmick : Character
             }
         }
     }
+
+    public void SetSubFinalScore(int _subFinalScoreAmount)
+    {
+        subFinalScoreAmount = _subFinalScoreAmount;
+    }
+
+    public void SetSubBallScore(int _subBallScoreAmount)
+    {
+        subBallScoreAmount = _subBallScoreAmount;
+    }
 }

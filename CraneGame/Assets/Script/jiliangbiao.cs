@@ -13,6 +13,11 @@ public class jiliangbiao : Character
     {
         base.Start();
         rb.freezeRotation = true;
+
+        int dsa = 1, da = 2;
+        float asd;
+        asd = (float)dsa / da;
+        Debug.Log(asd);
     }
 
     // Update is called once per frame
@@ -30,7 +35,7 @@ public class jiliangbiao : Character
         clearScore = SceneManager.Instance.GetClearScore();
 
         float percentage = (float)score / clearScore;
-
+        
         if (percentage >= 1) percentage = 1;
         else if(percentage < 0) percentage = 0;
 

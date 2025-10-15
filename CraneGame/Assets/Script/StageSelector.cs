@@ -9,7 +9,7 @@ public class StageSelector : MonoBehaviour
     //public StageConfig easyConfig;
     //public StageConfig normalConfig;
     //public StageConfig hardConfig;
-    [SerializeField] private bool[] isStageClear = new bool[6] ;
+    [SerializeField] private bool[] isStageClear = new bool[20] ;
     [SerializeField] private Button[] stageButton;
 
     [SerializeField] private Image grayBackground;

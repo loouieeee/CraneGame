@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame1008\\assets\\script\\hookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\hookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame1008\\assets\\script\\gimmick_spikeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gimmick_spikeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame1008\\assets\\script\\gimmick_sickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gimmick_sickle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame1008\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame1008\\assets\\script\\gimmick_slidestick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gimmick_slidestick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|c:\\users\\louis\\downloads\\cranegame1008\\assets\\script\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame1008\\assets\\script\\panelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\panelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|C:\\Users\\Louis\\Downloads\\CraneGame1008\\assets\\script\\gimmick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976CED89-79D7-FCD2-9C03-3BB2CE78C48E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gimmick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Gimmick.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Gimmick.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick.cs",
+              "RelativeToolTip": "Assets\\Script\\Gimmick.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T09:27:37.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HookController.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\HookController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\HookController.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\HookController.cs",
+              "RelativeToolTip": "Assets\\Script\\HookController.cs",
+              "ViewState": "AQIAACoBAAAAklDoinEowCMBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T09:46:10.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PanelManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\PanelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PanelManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\PanelManager.cs",
+              "RelativeToolTip": "Assets\\Script\\PanelManager.cs",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAcwOsAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T05:39:13.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Gimmick_SpikeBall.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick_SpikeBall.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Gimmick_SpikeBall.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick_SpikeBall.cs",
+              "RelativeToolTip": "Assets\\Script\\Gimmick_SpikeBall.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:28:38.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gimmick_Sickle.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick_Sickle.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Gimmick_Sickle.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick_Sickle.cs",
+              "RelativeToolTip": "Assets\\Script\\Gimmick_Sickle.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAmwCAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:28:28.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Gimmick_SlideStick.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick_SlideStick.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Gimmick_SlideStick.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\Gimmick_SlideStick.cs",
+              "RelativeToolTip": "Assets\\Script\\Gimmick_SlideStick.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAkwEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T02:08:18.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Script\\GameManager.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAAAH4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T03:12:31.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SceneManager.cs",
+              "DocumentMoniker": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\SceneManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SceneManager.cs",
+              "ToolTip": "C:\\Users\\Louis\\Downloads\\CraneGame1008\\Assets\\Script\\SceneManager.cs",
+              "RelativeToolTip": "Assets\\Script\\SceneManager.cs",
+              "ViewState": "AQIAAOQAAAAAAAAAAABFwPQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T03:00:16.533Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class HookController : Character, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
     //public static HookController instance;
+    [SerializeField] private Renderer rend;
 
     [SerializeField] private float xInput;
     [SerializeField] private float zInput;
@@ -20,6 +21,8 @@ public class HookController : Character, IDragHandler, IPointerUpHandler, IPoint
     [SerializeField] private Vector3 defAngle2 = new Vector3(0, 0, 10);
     [SerializeField] private Vector3 targetAngle = new Vector3(0, 0, -40);
     [SerializeField] private Vector3 targetAngle2 = new Vector3(0, 0, 40);
+    [SerializeField] private float xLimit;
+    [SerializeField] private float zLimit;
 
     [SerializeField] private float SphereColliderRadius = 1;
     [SerializeField] private Vector3 SphereCenter;
@@ -28,28 +31,87 @@ public class HookController : Character, IDragHandler, IPointerUpHandler, IPoint
     [SerializeField] private bool isCatch = false;
     [SerializeField] private bool isReachResultLine = false;
     [SerializeField] private bool isReact = false;
+    private Vector2 startPos;
+    private Vector2 inputDir;
 
     public List<Ball> caughtBalls = new List<Ball>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
     {
         base.Start();
-    } 
+        rend = GetComponent<Renderer>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-
+#if UNITY_EDITOR || UNITY_STANDALONE //pc输入
         xInput = Input.GetAxisRaw("Horizontal");
         zInput = Input.GetAxisRaw("Vertical");
 
+#elif UNITY_ANDROID || UNITY_IOS //手机
+ if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
 
-        if (!isStop && SceneManager.Instance.GetIsGameStart()) rb.linearVelocity = new Vector3(xInput * xMoveSpeed, -yMoveSpeed, zInput * zMoveSpeed);
+            if (touch.phase == TouchPhase.Began)
+            {
+                startPos = touch.position;
+                inputDir = Vector2.zero;
+            }
+            else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+            {
+                Vector2 delta = touch.position - startPos;
+                inputDir = delta.normalized;
+            }
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+                inputDir = Vector2.zero;
+            }
+
+            xInput = inputDir.x;
+            zInput = inputDir.y;
+        }
+        else
+        {
+            inputDir = Vector2.zero;
+        }
+
+#endif
+        if (!isStop && SceneManager.Instance.GetIsGameStart())
+        {
+            if (transform.position.x > xLimit && xInput > 0 || transform.position.x < -xLimit && xInput < 0)
+            {
+                SetZeroVelocityXZ();
+                xInput = 0;
+            }
+            else if (transform.position.z > zLimit && zInput > 0 || transform.position.z < -zLimit && zInput < 0)
+            {
+                SetZeroVelocityXZ();
+                zInput = 0;
+            }
+
+            else
+                rb.linearVelocity = new Vector3(xInput * xMoveSpeed, -yMoveSpeed, zInput * zMoveSpeed);
+        }
+
         HookMovement();
         HookReturnToDef();
+        ChangeColor();
 
     }
 
+    private void SetZeroVelocityXZ()
+    {
+        rb.linearVelocity = new Vector3(0, -yMoveSpeed, 0);
+    }
+    private void ChangeColor()
+    {
+        if (transform.position.x > 0)
+            rend.material.color = Color.blue;
+        else if (transform.position.x < 0)
+            rend.material.color = Color.red;
+    }
 
     public void TakeDamage()
     {
@@ -141,24 +203,27 @@ public class HookController : Character, IDragHandler, IPointerUpHandler, IPoint
 
             StartCoroutine(ShowResultScreen(3f));
         }
-
+        #region fix
         if (other.gameObject.CompareTag("LeftPanel"))
         {
             PanelManager panel = other.GetComponentInParent<PanelManager>();
             int panelCode = panel.GetLeftPanelCode();
-            switch (panelCode)
-            {
-                case 1:panel.AddBallScore(panel.GetLeftPanelValue()); break;
-                case 2:panel.SubBallScore(panel.GetLeftPanelValue()); break;
-                case 3:panel.MulBallScore(panel.GetLeftPanelValue()); break;
-                case 4:panel.DivBallScore(panel.GetLeftPanelValue()); break;
-                case 5:panel.CreateBall(panel.GetLeftPanelValue());break;
-                case 6:panel.SubBall(panel.GetLeftPanelValue()); break;
-                case 7:panel.MulBall(panel.GetLeftPanelValue()); break;
-                case 8:panel.DivBall(panel.GetLeftPanelValue()); break;
+            int panelValue = panel.GetLeftPanelValue();
+            ExecutePanelAction(panel, panelCode, panelValue);
 
-                default:break;
-            }
+            //switch (panelCode)
+            //{
+            //    case 1: panel.AddBallScore(panel.GetLeftPanelValue()); break;
+            //    case 2: panel.SubBallScore(panel.GetLeftPanelValue()); break;
+            //    case 3: panel.MulBallScore(panel.GetLeftPanelValue()); break;
+            //    case 4: panel.DivBallScore(panel.GetLeftPanelValue()); break;
+            //    case 5: panel.CreateBall(panel.GetLeftPanelValue()); break;
+            //    case 6: panel.SubBall(panel.GetLeftPanelValue()); break;
+            //    case 7: panel.MulBall(panel.GetLeftPanelValue()); break;
+            //    case 8: panel.DivBall(panel.GetLeftPanelValue()); break;
+
+            //    default: break;
+            //}
             //panel.CreateBall(panel.GetLeftPanelValue());
             Debug.Log("111");
         }
@@ -166,22 +231,89 @@ public class HookController : Character, IDragHandler, IPointerUpHandler, IPoint
         {
             PanelManager panel = other.GetComponentInParent<PanelManager>();
             int panelCode = panel.GetRightPanelCode();
-            switch (panelCode)
-            {
-                case 1: panel.AddBallScore(panel.GetRightPanelValue()); break;
-                case 2: panel.SubBallScore(panel.GetRightPanelValue()); break;
-                case 3: panel.MulBallScore(panel.GetRightPanelValue()); break;
-                case 4: panel.DivBallScore(panel.GetRightPanelValue()); break;
-                case 5: panel.CreateBall(panel.GetRightPanelValue()); break;
-                case 6: panel.SubBall(panel.GetRightPanelValue()); break;
-                case 7: panel.MulBall(panel.GetRightPanelValue()); break;
-                case 8: panel.DivBall(panel.GetRightPanelValue()); break;
+            int panelValue = panel.GetRightPanelValue();
+            ExecutePanelAction(panel, panelCode, panelValue);
 
-                default: break;
-            }
+            //switch (panelCode)
+            //{
+            //    case 1: panel.AddBallScore(panel.GetRightPanelValue()); break;
+            //    case 2: panel.SubBallScore(panel.GetRightPanelValue()); break;
+            //    case 3: panel.MulBallScore(panel.GetRightPanelValue()); break;
+            //    case 4: panel.DivBallScore(panel.GetRightPanelValue()); break;
+            //    case 5: panel.CreateBall(panel.GetRightPanelValue()); break;
+            //    case 6: panel.SubBall(panel.GetRightPanelValue()); break;
+            //    case 7: panel.MulBall(panel.GetRightPanelValue()); break;
+            //    case 8: panel.DivBall(panel.GetRightPanelValue()); break;
+
+            //    default: break;
+            //}
 
             Debug.Log("222");
         }
+
+        if (other.gameObject.CompareTag("upperLeftPanel"))
+        {
+            PanelManager panel = other.GetComponentInParent<PanelManager>();
+            int panelCode = panel.GetUpperLeftPanelCode();
+            int panelValue = panel.GetUpperLeftPanelValue();
+            ExecutePanelAction(panel, panelCode, panelValue);
+
+            //switch (panelCode)
+            //{
+            //    case 1: panel.AddBallScore(panel.GetUpperLeftPanelValue()); break;
+            //    case 2: panel.SubBallScore(panel.GetUpperLeftPanelValue()); break;
+            //    case 3: panel.MulBallScore(panel.GetUpperLeftPanelValue()); break;
+            //    case 4: panel.DivBallScore(panel.GetUpperLeftPanelValue()); break;
+            //    case 5: panel.CreateBall(panel.GetUpperLeftPanelValue()); break;
+            //    case 6: panel.SubBall(panel.GetUpperLeftPanelValue()); break;
+            //    case 7: panel.MulBall(panel.GetUpperLeftPanelValue()); break;
+            //    case 8: panel.DivBall(panel.GetUpperLeftPanelValue()); break;
+
+            //    default: break;
+            //}
+
+        }
+
+        if (other.gameObject.CompareTag("upperRightPanel"))
+        {
+            PanelManager panel = other.GetComponentInParent<PanelManager>();
+            int panelCode = panel.GetUpperRightPanelCode();
+            int panelValue = panel.GetUpperRightPanelValue();
+            ExecutePanelAction(panel, panelCode, panelValue);
+        }
+        if (other.gameObject.CompareTag("lowerLeftPanel"))
+        {
+            PanelManager panel = other.GetComponentInParent<PanelManager>();
+            int panelCode = panel.GetLowerLeftPanelCode();
+            int panelValue = panel.GetLowerLeftPanelValue();
+            ExecutePanelAction(panel, panelCode, panelValue);
+        }
+        if (other.gameObject.CompareTag("lowerRightPanel"))
+        {
+            PanelManager panel = other.GetComponentInParent<PanelManager>();
+            int panelCode = panel.GetLowerRightPanelCode();
+            int panelValue = panel.GetLowerRightPanelValue();
+            ExecutePanelAction(panel, panelCode, panelValue);
+        }
+        #endregion
+        //PanelManager panel = other.GetComponentInParent<PanelManager>();
+        //if (panel != null)
+        //{
+        //    Debug.Log("111");
+        //    string tag = other.tag;
+        //    int code = 0, value = 0;
+        //    switch (tag)
+        //    {
+        //        case "LeftPanel": code = panel.GetLeftPanelCode(); value = panel.GetLeftPanelValue(); break;
+        //        case "RightPanel": code = panel.GetRightPanelCode(); value = panel.GetRightPanelValue(); break;
+        //        case "upperLeftPanel": code = panel.GetUpperLeftPanelCode(); value = panel.GetUpperLeftPanelValue(); break;
+        //        case "upperRightPanel": code = panel.GetUpperRightPanelCode(); value = panel.GetUpperRightPanelValue(); break;
+        //        case "lowerLeftPanel": code = panel.GetLowerLeftPanelCode(); value = panel.GetLowerLeftPanelValue(); break;
+        //        case "lowerRightPanel": code = panel.GetLowerRightPanelCode(); value = panel.GetLowerRightPanelValue(); break;
+        //        default: return;
+        //    }
+        //    ExecutePanelAction(panel, code, value);
+        //}
 
         if (other.gameObject.CompareTag("SpikeBall"))
         {
@@ -204,6 +336,23 @@ public class HookController : Character, IDragHandler, IPointerUpHandler, IPoint
         }
     }
 
+    private void ExecutePanelAction(PanelManager panel, int code, int value)
+    {
+        switch (code)
+        {
+            case 1: panel.AddBallScore(value); break;
+            case 2: panel.SubBallScore(value); break;
+            case 3: panel.MulBallScore(value); break;
+            case 4: panel.DivBallScore(value); break;
+            case 5: panel.CreateBall(value); break;
+            case 6: panel.SubBall(value); break;
+            case 7: panel.MulBall(value); break;
+            case 8: panel.DivBall(value); break;
+            default: break;
+        }
+
+        Debug.Log($"Panel code: {code}, value: {value}, tag: {panel.gameObject.tag}");
+    }
     public void AddSpikeBall(Gimmick_SpikeBall spikeBall)
     {
         Rigidbody rb = spikeBall.GetComponent<Rigidbody>();

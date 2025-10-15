@@ -13,6 +13,10 @@ TagManager:
   - SpikeBall
   - SlideStick
   - Sickle
+  - upperLeftPanel
+  - upperRightPanel
+  - lowerLeftPanel
+  - lowerRightPanel
   layers:
   - Default
   - TransparentFX
