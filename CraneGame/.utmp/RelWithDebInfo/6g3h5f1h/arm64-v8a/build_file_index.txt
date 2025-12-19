@@ -1,0 +1,2 @@
+C:\Users\Louis\Downloads\CraneGame1022\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Louis\Downloads\CraneGame1022\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
