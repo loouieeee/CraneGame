@@ -25,6 +25,8 @@ public class IngameManager : MonoBehaviour
     [Header("BallInfo")]
     [SerializeField] private GameObject ballPerfab; // ボールのプレハブ
     [SerializeField] private int ballToCreate; // 生成するボールの数
+    public int minBallScore;
+    public int maxBallScore;
 
     [Header("Panelinfo")]
     [SerializeField] private int panelPos_Y;
@@ -81,7 +83,10 @@ public class IngameManager : MonoBehaviour
 
     [Header("UIInfo")]
     [SerializeField] private GameObject resultUI; // リザルトUI
+    [SerializeField] public GameObject joystick;
+    [SerializeField] private GameObject joystickUI;
     [SerializeField] private Image resultBackground; // リザルト背景
+    [SerializeField] private Sprite[] resultBackSR;
     [SerializeField] private TMP_Text result_text; // リザルトテキスト
     [SerializeField] private TMP_Text clearscore_text; // クリアスコアテキスト
     [SerializeField] private TMP_Text score_text; // スコアテキスト
@@ -134,6 +139,7 @@ public class IngameManager : MonoBehaviour
     public List<string> ballScores; // ボールのスコアリスト
     private int csvOffset = 4;
     [SerializeField] private bool isReachingStopLine;
+    [SerializeField] private GameObject ball_zhuangshiPrefab;
 
 
     public GameObject effectPrefab;
@@ -159,6 +165,8 @@ public class IngameManager : MonoBehaviour
         effectPos = new List<Vector3>();
         currentList = 0;
         GameInit();
+        CraneInit();
+
     }
 
     /// <summary>
@@ -170,8 +178,12 @@ public class IngameManager : MonoBehaviour
         Debug.Log("chongqile");
         UIManager.Instance.UpdateScoreText(score);
         //GameInit();
-        StartCoroutine(StartingCover());
-        liangtongInit();
+        //StartCoroutine(StartingCover());
+        MeasuringCylinderInit();
+        SetJoyStickUI(true);
+        CreateBall(ballToCreate);
+        CreateBallZhuangshi();
+
         effectPrefab.transform.position = new Vector3(0, effectPos[currentList].y, 0);
         lockOnMark.transform.position = new Vector3(0, effectPos[currentList].y, 0);
         laserLR = laser.GetComponent<LineRenderer>();
@@ -179,9 +191,15 @@ public class IngameManager : MonoBehaviour
         //GameObject eff = Instantiate(effectPrefab,new Vector3(0,effectPos[currentList].y,0),Quaternion.identity);
     }
 
+
     private void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0)) { gameStart = true; SetJoyStickUI(false); }
+    }
+    private void CraneInit()
+    {
+        HookController crane = Crane.GetComponent<HookController>();
+        crane.SetXMoveSpeed((float)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "E", 16));
     }
 
     public void SetEffectPos(Transform _pos)
@@ -205,6 +223,10 @@ public class IngameManager : MonoBehaviour
         effectPrefab.gameObject.SetActive(false);
         lockOnMark.gameObject.SetActive(false);
         laser.gameObject.SetActive(false);
+    }
+    public void SetJoyStickUI(bool _active)
+    {
+        joystickUI.gameObject.SetActive(_active);
     }
     public void PlusCurrentList()
     {
@@ -312,6 +334,7 @@ public class IngameManager : MonoBehaviour
     /// </summary>
     public void ClickOnBackToStageSelectButton()
     {
+        Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene("StageSelectScene");
     }
 
@@ -327,6 +350,7 @@ public class IngameManager : MonoBehaviour
         if (score >= clearScore)
         {
             isClear = true;
+            resultBackground.sprite = resultBackSR[0];
             result_text.text = "CLEAR!!";
             clearscore_text.text = "CLEAR SCORE : " + clearScore.ToString() + "m";
             score_text.text = "SCORE : " + score.ToString() + "m";
@@ -337,6 +361,7 @@ public class IngameManager : MonoBehaviour
         }
         else
         {
+            resultBackground.sprite = resultBackSR[1];
             result_text.text = "GAME OVER";
             clearscore_text.text = "CLEAR SCORE : " + clearScore.ToString() + "m";
             score_text.text = "SCORE : " + score.ToString() + "m";
@@ -374,7 +399,10 @@ public class IngameManager : MonoBehaviour
         hookMoveSpeed_y = (int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "E", 14);
         ukezaraPos = (int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "V", 3);
 
-        CreateBall();
+        ballToCreate = (int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "E", 18);
+        minBallScore = (int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "E", 20);
+        maxBallScore = (int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "E", 22);
+
         CreatePanel();
         CreateGimmick();
         //liangtongInit();
@@ -387,13 +415,13 @@ public class IngameManager : MonoBehaviour
         //AudioManager.Instance.PlayBGM(AudioManager.Instance.InGameBGM);
     }
 
-    private void liangtongInit()
+    private void MeasuringCylinderInit()
     {
         measurePerfab.transform.position = new Vector3(81.5f, ukezaraPos + 10, -55f);
         measurePerfab.transform.rotation = Quaternion.Euler(18, 0, 0);
         liangtongPerfab.transform.position = new Vector3(81.5f, ukezaraPos - 7, -55f);
         liangtongPerfab.transform.rotation = Quaternion.Euler(20.2f, 0, 0);
-        stopLine.transform.position = new Vector3(0, ukezaraPos + 6f, 0);
+        stopLine.transform.position = new Vector3(0, ukezaraPos - 3, 0);
     }
 
     /// <summary>
@@ -470,20 +498,46 @@ public class IngameManager : MonoBehaviour
     /// <summary>
     /// ボールを生成する
     /// </summary>
-    private void CreateBall()
+    public void CreateBall(int _ballToCreate)
     {
-        for (int i = 0; i < ballToCreate; i++)
+        for (int i = 0; i < _ballToCreate; i++)
         {
             int randPosX = Random.Range(-25, 25);
             int randPosZ = Random.Range(-25, 25);
             pos = new Vector3(randPosX, ukezaraPos+5, randPosZ);
-            GameObject newBall = Instantiate(ballPerfab, pos, Quaternion.identity);
+            //GameObject newBall = Instantiate(ballPerfab, pos, Quaternion.identity);
+            GameObject newBall = PoolManager.Instance.GetObject("ball", pos, Quaternion.identity);
+            //GameObject newAnon = Instantiate(anonPerfab,pos, Quaternion.identity);
+            //newAnon.transform.localScale = new Vector3(5, 5, 5);
+            int randScore = Random.Range(minBallScore, maxBallScore);
+            newBall.GetComponent<Ball>().SetBallScore(randScore);
+            //Debug.Log("生成ball！");
+        }
+    }
+
+    public void CreateBallZhuangshi()
+    {
+        for (int i = 0; i < 300; i++)
+        {
+            int randPosX = Random.Range(-25, 25);
+            int randPosZ = Random.Range(-25, 25);
+            int randPosY = Random.Range(5, 10);
+
+            pos = new Vector3(randPosX, ukezaraPos - randPosY, randPosZ);
+            //if()
+            //GameObject newBall = Instantiate(ballPerfab, pos, Quaternion.identity);
+            GameObject newBall = PoolManager.Instance.GetObject("ball", pos, Quaternion.identity);
+
+            //newBall.GetComponent<Rigidbody>().useGravity = false;
 
             //GameObject newAnon = Instantiate(anonPerfab,pos, Quaternion.identity);
             //newAnon.transform.localScale = new Vector3(5, 5, 5);
-            int randScore = Random.Range(1, 11);
+            int randScore = Random.Range(minBallScore, maxBallScore);
             newBall.GetComponent<Ball>().SetBallScore(randScore);
-            Debug.Log("生成了一个新物体！");
+            //Debug.Log("生成ball！");
+
+            //Renderer render = newBall.GetComponent<Renderer>();
+            //render.material.color = Random.ColorHSV(0f, 1f, 0.5f, 1f, 0.5f, 1f);
         }
     }
     /// <summary>
@@ -512,7 +566,6 @@ public class IngameManager : MonoBehaviour
             panelType = (int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "H", csvOffset * i + 3);
             panelPos_Y = (int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "T", csvOffset * i + 3);
             Vector3 pos = new Vector3(0, panelPos_Y, 0);
-            //PanelManager newPanel = Instantiate(panel, pos, Quaternion.identity);
             PanelManager newPanel = Instantiate(panelobj, pos, Quaternion.identity).GetComponent<PanelManager>();
 
             effectPos.Add(pos);
@@ -527,10 +580,6 @@ public class IngameManager : MonoBehaviour
 
 
                 newPanel.SetPanelPartsTwo(leftPanelCode, leftValue, rightPanelCode, rightValue);
-                //newPanel.SetLeftPanelCode(leftPanelCode);
-                //newPanel.SetRightPanelCode(rightPanelCode);
-                //newPanel.SetLeftPanelValue(leftValue);
-                //newPanel.SetRightPanelValue(rightValue);
             }
 
             else if (panelType == 4)
@@ -547,16 +596,6 @@ public class IngameManager : MonoBehaviour
 
                 newPanel.SetPanelPartsFour(upperLeftPanelCode, upperLeftPanelValue, upperRightPanelCode, upperRightPanelValue,
                     lowerLeftPanelCode, lowerLeftPanelValue, lowerRightPanelCode, lowerRightPanelValue);
-
-                //newPanel.SetUpperLeftPanelCode(upperLeftPanelCode);
-                //newPanel.SetUpperLeftPanelValue(upperLeftPanelValue);
-                //newPanel.SetUpperRightPanelCode(upperRightPanelCode);
-                //newPanel.SetUpperRightPanelValue(upperRightPanelValue);
-
-                //newPanel.SetLowerLeftPanelCode(lowerLeftPanelCode);
-                //newPanel.SetLowerLeftPanelValue(lowerLeftPanelValue);
-                //newPanel.SetLowerRightPanelCode(lowerRightPanelCode);
-                //newPanel.SetLowerRightPanelValue(lowerRightPanelValue);
             }
 
             newPanel.SetIsRotate((int)CSVReader.instance.ReadTargetCellIndex(targetHexMap, "Q", csvOffset * i + 3));
@@ -642,5 +681,7 @@ public class IngameManager : MonoBehaviour
     {
         return liangtongPerfab.transform.position.z;
     }
+
+    public int GetukezaraPos() => ukezaraPos;
 }
 

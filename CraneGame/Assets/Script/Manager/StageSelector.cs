@@ -257,7 +257,7 @@ public class StageSelector : MonoBehaviour
         {
             GameObject button;
 
-            Vector2 offset = new Vector2(0, -300); // UI 间距（你自己调）
+            Vector2 offset = new Vector2(0, -300); // UI 间距
 
             button = Instantiate(buttonPrefab, parent, false);
 

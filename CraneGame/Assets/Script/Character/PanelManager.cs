@@ -298,13 +298,17 @@ public class PanelManager : MonoBehaviour
             {
                 int randPosX = Random.Range(-25, 25);
                 int randPosZ = Random.Range(-25, 25);
-                pos = new Vector3(randPosX, -150, randPosZ);
-                GameObject newBall = Instantiate(ballPerfab, pos, Quaternion.identity);
+                pos = new Vector3(randPosX, IngameManager.Instance.GetukezaraPos() + 5, randPosZ);
+                //GameObject newBall = Instantiate(ballPerfab, pos, Quaternion.identity);
+                GameObject newBall = PoolManager.Instance.GetObject("ball", pos, Quaternion.identity);
 
-                int randScore = Random.Range(1, 11);
+                int randScore = Random.Range(IngameManager.Instance.minBallScore, IngameManager.Instance.maxBallScore);
                 newBall.GetComponent<Ball>().SetBallScore(randScore);
-                Debug.Log("生成了一个新物体！");
+                Debug.Log("生成ball！");
             }
+
+            //IngameManager.Instance.CreateBall(numOfBallToCreate);
+
             isBurn = true;
         }
     }
@@ -318,7 +322,8 @@ public class PanelManager : MonoBehaviour
         GameObject[] balls = GameObject.FindGameObjectsWithTag("ball");
         foreach (GameObject ball in balls)
         {
-            Destroy(ball);
+            //Destroy(ball);
+            PoolManager.Instance.ReturnObject("ball", ball);
             deletedBall++;
             if (deletedBall >= numberOfBallToDelete)
                 break;
@@ -334,14 +339,19 @@ public class PanelManager : MonoBehaviour
         {
             GameObject[] balls = GameObject.FindGameObjectsWithTag("ball");
             int num = balls.Length;
-            int temp = num * numOfBallToMul;
-
-            for (int i = 0; i < temp; i++)
+            int needCreate = num * (numOfBallToMul - 1);
+            for (int i = 0; i < needCreate; i++)
             {
-                GameObject newBall = Instantiate(ballPerfab, pos, Quaternion.identity);
+                int randPosX = Random.Range(-25, 25);
+                int randPosZ = Random.Range(-25, 25);
+                pos = new Vector3(randPosX, IngameManager.Instance.GetukezaraPos() + 5, randPosZ);
+
+                //GameObject newBall = Instantiate(ballPerfab, pos, Quaternion.identity);
+                GameObject newBall = PoolManager.Instance.GetObject("ball", pos, Quaternion.identity);
+
                 int randScore = Random.Range(1, 11);
                 newBall.GetComponent<Ball>().SetBallScore(randScore);
-                Debug.Log("生成了一个新物体！");
+                Debug.Log("create a ball！");
             }
             isBurn = true;
         }
@@ -359,7 +369,8 @@ public class PanelManager : MonoBehaviour
 
         foreach (GameObject ball in balls)
         {
-            Destroy(ball);
+            //Destroy(ball);
+            PoolManager.Instance.ReturnObject("ball", ball);
             deletedBall++;
             if (deletedBall >= temp)
                 break;
